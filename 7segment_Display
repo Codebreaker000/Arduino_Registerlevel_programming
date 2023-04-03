@@ -1,0 +1,64 @@
+// C++ code
+//
+void setup()
+{
+  DDRB |=(1<<DDB3);
+  DDRB |=(1<<DDB2);
+  DDRD |=(1<<DDD4);
+  DDRD |=(1<<DDD5);
+  DDRB |=(1<<DDB1);
+  DDRB |=(1<<DDB4);
+  DDRB |=(1<<DDB5);
+}
+
+void loop()
+{
+  PORTB |=(1<<PB3);
+  PORTB |=(1<<PB2);
+  PORTD |=(1<<PD4);
+  PORTD &=(~(1<<PD5));
+  PORTB |=(1<<PB1);
+  PORTB |=(1<<PB4);
+  PORTB |=(1<<PB5);
+  delay(2000);
+  PORTB &=((~1<<PB3));
+  PORTB &=(~(1<<PB2));
+  PORTD |=(1<<PD4);
+  PORTD |=(1<<PD5);
+  PORTB |=(1<<PB1);
+  PORTB |=(1<<PB4);
+  PORTB |=(1<<PB5);
+  delay(2000);
+  PORTB |=(1<<PB3);
+  PORTB &=((~1<<PB2));
+  PORTD &=((~1<<PD4));
+  PORTD |=(1<<PD5);
+  PORTB |=(1<<PB1);
+  PORTB |=(1<<PB4);
+  PORTB &=(~(1<<PB5));
+  delay(2000);
+  PORTB &=(~(1<<PB3));
+  PORTB |=(1<<PB2);
+  PORTD |=(1<<PD4);
+  PORTD |=(1<<PD5);
+  PORTB |=(1<<PB1);
+  PORTB &=(~(1<<PB4));
+  PORTB |=(1<<PB5);
+  delay(2000);
+  PORTB |=(1<<PB3);
+  PORTB &=(~(1<<PB2));
+  PORTD &=(~(1<<PD4));
+  PORTD |=(1<<PD5);
+  PORTB |=(1<<PB1);
+  PORTB |=(1<<PB4);
+  PORTB |=(1<<PB5);
+  delay(2000);
+  PORTB |=(1<<PB3);
+  PORTB &=(~(1<<PB2));
+  PORTD &=(~(1<<PD4));
+  PORTD &=(~(1<<PD5));
+  PORTB |=(1<<PB1);
+  PORTB |=(1<<PB4);
+  PORTB |=(1<<PB5);
+  delay(2000);
+}
